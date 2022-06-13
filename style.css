@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #FF7D45;
+}
+
+#siteboard {
+    width: 680px;
+    height: 480px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+#cardboard {
+    width: 560px;
+    height: 480px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memory-card {
+    width: calc(20% - 10px);
+    height: 23%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    position: relative;
+}
+
+.back-face:hover {
+    background-color: #29F2D7;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    background: #675a10;
+    backface-visibility: hidden;
+    /*
+    erro ao ver a carta
+    e comando para resolver encontrado aqui.
+     https://github.com/JulioSantooz/projeto-jogo-memoria/blob/main/style.css
+    */
+    cursor: pointer;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+    background-color: #29F2D7;
+}
+
+.item {
+    background-color: #A63C0E;
+    margin: 2px;
+    color: white;
+    text-align: center;
+    flex: 1;
+    border: 1px solid black;
+    max-height: 70px;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.text {
+    text-align: center;
+    background-color: #A63C0E;
+    padding: 15px;
+    color: white;
+
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #A63C0E;
+}
+
+.button:hover {
+    background-color: #000000;
+}
+
+.black{
+    background-color: #000000;
+}
+.blue{
+    background-color: #022eaa;
+}
+.yellow{
+    background-color: #e4d500;
+    color: #000000;
+}
+.green{
+    background-color: #285801;
+}
+.red{
+    background-color: #bd0303;
+}
